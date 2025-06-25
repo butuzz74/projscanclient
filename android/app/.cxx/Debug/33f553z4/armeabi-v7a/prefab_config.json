@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "prefabPath": "C:\\Users\\butuz\\.gradle\\caches\\modules-2\\files-2.1\\com.google.prefab\\cli\\2.1.0\\aa32fec809c44fa531f01dcfb739b5b3304d3050\\cli-2.1.0-all.jar",
+  "packages": [
+    "C:\\Users\\butuz\\.gradle\\caches\\8.13\\transforms\\89abb8f432dd3d777d797d80a21ec265\\transformed\\react-android-0.79.3-debug\\prefab",
+    "C:\\Users\\butuz\\.gradle\\caches\\8.13\\transforms\\8fcf330c88260c56462e1ed111d25fc4\\transformed\\hermes-android-0.79.3-debug\\prefab",
+    "C:\\Users\\butuz\\.gradle\\caches\\8.13\\transforms\\e693727f228fb424bdc528b2372cb586\\transformed\\fbjni-0.7.0\\prefab"
+  ]
+}

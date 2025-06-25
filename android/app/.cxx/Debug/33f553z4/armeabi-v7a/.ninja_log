@@ -1,0 +1,11 @@
+# ninja log v5
+0	23	0	C:/Projects/ProjScan/projscanclient/android/app/.cxx/Debug/33f553z4/armeabi-v7a/CMakeFiles/cmake.verify_globs	418b4b3a69a2e267
+10	2337	7713351078269325	CMakeFiles/appmodules.dir/C_/Projects/ProjScan/projscanclient/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	bd097977265876
+0	7	0	clean	774916536a4c2d2
+2507	2594	7713351080930691	C:/Projects/ProjScan/projscanclient/android/app/build/intermediates/cxx/Debug/33f553z4/obj/armeabi-v7a/libappmodules.so	10ffe7d3f81f5178
+17	2507	7713351079971181	CMakeFiles/appmodules.dir/OnLoad.cpp.o	6e95eb32a0851448
+23	211	7713376568046384	build.ninja	49bfdd7f9430c44a
+1	21	0	C:/Projects/ProjScan/projscanclient/android/app/.cxx/Debug/33f553z4/armeabi-v7a/CMakeFiles/cmake.verify_globs	418b4b3a69a2e267
+12	1821	7713376588388076	CMakeFiles/appmodules.dir/C_/Projects/ProjScan/projscanclient/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	bd097977265876
+6	2040	7713376590618073	CMakeFiles/appmodules.dir/OnLoad.cpp.o	6e95eb32a0851448
+2040	2122	7713376591491196	C:/Projects/ProjScan/projscanclient/android/app/build/intermediates/cxx/Debug/33f553z4/obj/armeabi-v7a/libappmodules.so	10ffe7d3f81f5178

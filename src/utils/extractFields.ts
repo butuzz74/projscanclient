@@ -1,9 +1,11 @@
+import {modelProducts} from '../config/config';
+
 export const extractFields = (lines: string[]) => {
   const brandRegex = /(nec|optoma|infocus)/i;
-  const modelRegex = /([A-Z]{2,}-?[A-Z]*\d{3,}[A-Z]*)/;
+  const modelRegex = new RegExp(`\\b(${modelProducts.join('|')})\\b`, 'i');
   const deviceTypeRegex = /(projector|display|screen)/i;
   const serialNumberOptomaRegex = /^Q[A-Z0-9]{14}\d{2}$/;
-  //const serialNumberInFocusRegex = /^[A-Z0-9]{12}$/;
+  const serialNumberInFocusRegex = /^(?=.*\d)[A-Z0-9]{12}$/;
   const manufactoreCountryRegex = /made in ([a-zA-Z\s]+)/i;
 
   let extractedBrand = '';
@@ -17,8 +19,9 @@ export const extractFields = (lines: string[]) => {
       extractedBrand = line.match(brandRegex)?.[0] ?? '';
     }
 
-    if (!extractedModel && modelRegex.test(line)) {
-      extractedModel = line.match(modelRegex)?.[0] ?? '';
+    if (!extractedModel) {
+      const newLine = line.replace(/O/g, '0');
+      extractedModel = newLine.match(modelRegex)?.[0] ?? '';
     }
 
     if (!extractedDeviceType && deviceTypeRegex.test(line)) {
@@ -40,6 +43,13 @@ export const extractFields = (lines: string[]) => {
       }
     }
 
+    if (
+      extractedSerialNumber.length === 0 &&
+      serialNumberInFocusRegex.test(line)
+    ) {
+      extractedSerialNumber = line.match(serialNumberInFocusRegex)?.[0] ?? '';
+    }
+
     if (!extractedManufactoreCountry && manufactoreCountryRegex.test(line)) {
       extractedManufactoreCountry =
         line.match(manufactoreCountryRegex)?.[0] ?? '';
@@ -57,10 +67,14 @@ export const extractFields = (lines: string[]) => {
   }
 
   return {
-    brand: extractedBrand,
-    model: extractedModel,
-    deviceType: extractedDeviceType,
-    serialNumber: extractedSerialNumber,
+    brand:
+      extractedBrand.charAt(0).toUpperCase() +
+      extractedBrand.slice(1).toLowerCase(),
+    model: extractedModel.toUpperCase(),
+    deviceType:
+      extractedDeviceType.charAt(0).toUpperCase() +
+      extractedDeviceType.slice(1).toLowerCase(),
+    serialNumber: extractedSerialNumber.toUpperCase(),
     manufactureCountry: extractedManufactoreCountry,
   };
 };

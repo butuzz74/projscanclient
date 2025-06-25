@@ -1,9 +1,10 @@
 import {ResultData} from '../types/types';
 import {Alert} from 'react-native';
+import {API_URL} from '@env';
 
 export const handleSendScanData = async (structuredData: ResultData) => {
   try {
-    const response = await fetch('http://31.129.33.170:4000/api/products', {
+    const response = await fetch(`${API_URL}/api/products`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(structuredData),
