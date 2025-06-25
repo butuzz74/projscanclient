@@ -24,14 +24,6 @@
 - react-native-camera / mlkit-ocr
 - AsyncStorage (для офлайн-режима, в будущем)
 
-## ⚙️ Установка
-
-```bash
-git clone https://github.com/butuzz74/projscanclient.git
-cd projscanclient
-npm install
-npx react-native run-android
-
 ## 🔐 Безопасность
 Всё, что связано с ключами, паролями и .keystore — не включено в репозиторий.
 
@@ -40,6 +32,14 @@ npx react-native run-android
 - Node.js + Express
 - MongoDB + Mongoose
 - ExcelJS
+  
+
+## ⚙️ Установка
+git clone https://github.com/butuzz74/projscanclient.git
+cd projscanclient
+npm install
+npx react-native run-android
+
 
 ## 📧 Контакты
 Разработчик: Алексей Данильчик
