@@ -35,13 +35,13 @@
   
 
 ## ⚙️ Установка
-git clone https://github.com/butuzz74/projscanclient.git
-cd projscanclient
-npm install
-npx react-native run-android
+- git clone https://github.com/butuzz74/projscanclient.git
+- cd projscanclient
+- npm install
+- npx react-native run-android
 
 
 ## 📧 Контакты
-Разработчик: Алексей Данильчик
-GitHub: github.com/butuzz74
-email: butuzz74@gmail.com
+- Разработчик: Алексей Данильчик
+- GitHub: github.com/butuzz74
+- email: butuzz74@gmail.com
